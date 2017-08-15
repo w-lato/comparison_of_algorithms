@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pl.agh.edu</groupId>
+    <artifactId>Engineers_Thesis</artifactId>
+    <version>1.0</version>
+
+    <dependencies>
+        <!-- 1. quicksort -->
+        <!-- https://mvnrepository.com/artifact/org.codehaus.jedi/quicksort-example -->
+        <dependency>
+            <groupId>org.codehaus.jedi</groupId>
+            <artifactId>quicksort-example</artifactId>
+            <version>3.0.5</version>
+        </dependency>
+
+        <!-- 2. shortest path in graph -->
+        <!-- https://mvnrepository.com/artifact/org.neo4j/neo4j-graph-algo -->
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j-graph-algo</artifactId>
+            <version>3.2.3</version>
+        </dependency>
+
+        <!-- 3. Levenstein distance -->
+        <!-- https://mvnrepository.com/artifact/info.debatty/java-string-similarity -->
+        <dependency>
+            <groupId>info.debatty</groupId>
+            <artifactId>java-string-similarity</artifactId>
+            <version>0.24</version>
+        </dependency>
+
+        <!-- 4. matrix multiplication -->
+        <!-- https://mvnrepository.com/artifact/com.googlecode.efficient-java-matrix-library/ejml -->
+        <dependency>
+            <groupId>com.googlecode.efficient-java-matrix-library</groupId>
+            <artifactId>ejml</artifactId>
+            <version>0.25</version>
+        </dependency>
+
+        <!-- 5. Cocke-younger-Kasami algorithm -->
+        <!-- NO DESCRIPTION OF PARSING ALGORITHMS AVAILABLE IN MAVEN REPOS -->
+
+        <!-- 6. Ford fulkerson MAX-Flow -->
+        <!-- NO DESCRIPTION OF MAxFLOW ALGORITHM AVAILABLE IN MAVEN REPOS -->
+
+        <!-- 7. Rabin Karp Pattern Matching -->
+
+        <!-- 8. Merge sort -->
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.util/java-merge-sort -->
+        <dependency>
+            <groupId>com.fasterxml.util</groupId>
+            <artifactId>java-merge-sort</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <!-- 9.FFT -->
+        <!-- https://mvnrepository.com/artifact/com.github.rwl/jtransforms -->
+        <dependency>
+            <groupId>com.github.rwl</groupId>
+            <artifactId>jtransforms</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
+        <!--12. RSA Encoding and decoding-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-rsa -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-rsa</artifactId>
+            <version>1.0.5.RELEASE</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
