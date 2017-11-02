@@ -245,8 +245,6 @@ public class ShortestPathDijkstra extends Algorithm {
     public void startTimeTest() {
         PrintWriter pw = this.prepareFileWriter();
         prepareTestData();
-        //Dij
-
 
         for (int i = 0; i < this.getIterations(); i++) {
             timeDiff = System.nanoTime();

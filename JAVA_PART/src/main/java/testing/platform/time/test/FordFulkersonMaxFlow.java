@@ -69,7 +69,6 @@ public class FordFulkersonMaxFlow extends Algorithm {
     public void startTimeTest() {
         prepareTestData();
         PrintWriter pw = this.prepareFileWriter();
-        long timeDiff;
         MaxFlow m = new MaxFlow();
 
         for (int i = 0; i < this.getIterations(); i++) {

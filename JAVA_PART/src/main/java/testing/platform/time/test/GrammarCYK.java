@@ -9,7 +9,8 @@ import java.io.PrintWriter;
 public class GrammarCYK extends Algorithm {
 
 //    String grammarFilePath = "C:\\Users\\wlato\\IdeaProjects\\engineers_thesis\\JAVA_PART\\src\\main\\java\\test\\algorithms\\CYK\\anotherCYK\\old_cyk\\other\\grammars\\grammar5.txt";
-    String grammarFilePath = "C:\\Users\\wlato\\IdeaProjects\\engineers_thesis\\JAVA_PART\\src\\main\\java\\testing\\platform\\data\\source\\grammar5.txt";
+//    String grammarFilePath = "C:\\Users\\wlato\\IdeaProjects\\engineers_thesis\\JAVA_PART\\src\\main\\java\\testing\\platform\\data\\source\\grammar5.txt";
+    String grammarFilePath = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/grammar.txt";
     public GrammarCYK(String fileName, int iterations) {
         super(fileName, iterations);
     }
@@ -27,7 +28,6 @@ public class GrammarCYK extends Algorithm {
     public void startTimeTest() {
         prepareTestData();
         PrintWriter pw = this.prepareFileWriter();
-        long timeDiff;
         String[] args = new String[2];
         Grammar Grammar = new Grammar(grammarFilePath);
         //String input = "00010010000001110001010000010000"; //14 07 1410

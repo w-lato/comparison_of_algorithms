@@ -16,7 +16,9 @@ public class FastFourierTransform1D extends Algorithm {
      * Complex(1.0, -2.0) -> complexVals[x] == 1.0 , complexVals[x + 1] = -2.0;
      */
     double[] complexVals;
-    String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATLAB_FFT\\orig_winter.txt";
+    //String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATLAB_FFT\\orig_winter.txt";
+    //String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATLAB_FFT\\orig_winter.txt";
+    String path = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/orig_winter.txt";
 
     public FastFourierTransform1D(String fileName, int iterations) {
         super(fileName, iterations);
@@ -72,7 +74,6 @@ public class FastFourierTransform1D extends Algorithm {
         prepareTestData();
         PrintWriter pw = this.prepareFileWriter();
         double[] testComplexArr = new double[complexVals.length];
-        long timeDiff;
 
         for (int i = 0; i < this.getIterations(); i++) {
             fillWithOriginalData(testComplexArr);

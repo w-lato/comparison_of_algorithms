@@ -23,12 +23,14 @@ public class EditDistanceLevenshtein extends Algorithm {
     @Override
     public void startTimeTest() {
         PrintWriter pw = this.prepareFileWriter();
-        long timeDiff;String s1 = "",s2 = "";
+        String s1 = "",s2 = "";
         Levenshtein levenshtein = new Levenshtein();
 
         try {
-            s1 = IOUtils.toString(new FileInputStream(new File("C:\\Users\\wlato\\Desktop\\praca_inzynierska\\levenshtein_bible\\tysiaclecia_utf8.txt")), "UTF-8");
-            s2 = IOUtils.toString(new FileInputStream(new File("C:\\Users\\wlato\\Desktop\\praca_inzynierska\\levenshtein_bible\\poznanska_utf8.txt")), "UTF-8");
+           // s1 = IOUtils.toString(new FileInputStream(new File("C:\\Users\\wlato\\Desktop\\praca_inzynierska\\levenshtein_bible\\tysiaclecia_utf8.txt")), "UTF-8");
+           // s2 = IOUtils.toString(new FileInputStream(new File("C:\\Users\\wlato\\Desktop\\praca_inzynierska\\levenshtein_bible\\poznanska_utf8.txt")), "UTF-8");
+            s1 = IOUtils.toString(new FileInputStream(new File("/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/EDIT_DIST/poznanska_utf8.txt")), "UTF-8");
+            s2 = IOUtils.toString(new FileInputStream(new File("/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/EDIT_DIST/tysiaclecia_utf8.txt")), "UTF-8");
         } catch (Exception ex) {
             ex.printStackTrace();
         }

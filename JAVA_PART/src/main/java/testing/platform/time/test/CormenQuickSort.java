@@ -13,7 +13,6 @@ public class CormenQuickSort extends SortingAlgorithm {
 
     protected void testAndWriteTofile(int[] aux, SortDataType type,
                                       testing.platform.algorithms.implementation.CormenQuickSort qs) {
-        long timeDiff;
         PrintWriter pw = this.prepareFileWriter(type);
         for (int i = 0; i < this.getIterations(); i++) {
             if(type == SortDataType.RANDOM)
@@ -60,7 +59,8 @@ public class CormenQuickSort extends SortingAlgorithm {
     }
 
     public static void main(String[] args) {
-        String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\SORT_DATA\\";
+        //String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\SORT_DATA\\";
+        String path = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/QUICK_SORT/";
         CormenQuickSort cqs = new CormenQuickSort("QuickSort",1, path);
         cqs.startTimeTest();
     }

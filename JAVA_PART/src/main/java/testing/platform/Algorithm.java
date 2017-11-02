@@ -1,8 +1,5 @@
 package testing.platform;
 
-import com.sun.istack.internal.NotNull;
-
-import java.io.File;
 import java.io.PrintWriter;
 import java.util.Calendar;
 import java.util.Date;
@@ -10,7 +7,8 @@ import java.util.Date;
 public abstract class Algorithm {
 
     public long timeDiff;
-    protected final String filepath = "C:\\Users\\wlato\\Desktop\\TIME_TEST\\";
+    //protected final String filepath = "C:\\Users\\wlato\\Desktop\\TIME_TEST\\";
+    protected final String filepath = "/home/vm/Desktop/ENGINEERS_REPO/TIME_RESULTS/JAVA/";
     protected String fileName;
     private int iterations;
 
@@ -46,7 +44,14 @@ public abstract class Algorithm {
 
     public String getTimeAndDate() {
         Date now = Calendar.getInstance().getTime();
-        return "_" + String.valueOf(now.getDay()) + String.valueOf(now.getMonth() +
+        String day;
+        if(now.getDay() < 10) {
+            day = "0" + String.valueOf(now.getDay());
+        } else {
+            day = String.valueOf(now.getDay());
+        }
+
+        return "_" + day + String.valueOf(now.getMonth() +
                 String.valueOf(now.getYear() % 2000) + "_" +
                 String.valueOf(now.getHours()) + String.valueOf(now.getMinutes())
         );

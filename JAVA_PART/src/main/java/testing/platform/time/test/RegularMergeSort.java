@@ -14,7 +14,6 @@ public class RegularMergeSort extends SortingAlgorithm {
 
     protected void testAndWriteTofile(int[] aux, SortDataType type,
                                       MergeSort gms) {
-        long timeDiff;
         PrintWriter pw = this.prepareFileWriter(type);
         for (int i = 0; i < this.getIterations(); i++) {
             if(type == SortDataType.RANDOM)
@@ -60,7 +59,8 @@ public class RegularMergeSort extends SortingAlgorithm {
     }
 
     public static void main(String[] args) {
-        String sortDataPath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MERGE_SORT_DATA\\";
+        //String sortDataPath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MERGE_SORT_DATA\\";
+        String sortDataPath = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/MERGE_SORT/";
         RegularMergeSort ms = new RegularMergeSort("MergeSort_",1, sortDataPath);
         ms.startTimeTest();
     }

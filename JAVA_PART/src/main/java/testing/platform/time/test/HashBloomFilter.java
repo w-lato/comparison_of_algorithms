@@ -11,7 +11,8 @@ import java.util.ArrayList;
 public class HashBloomFilter extends Algorithm {
 
 //    String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\list_of_urls.txt";
-    String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\merged_urls.txt";
+   // String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\merged_urls.txt";
+    String path = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/urls.txt";
     ArrayList<String> urls;
 
     public HashBloomFilter(String fileName, int iterations) {
@@ -40,7 +41,6 @@ public class HashBloomFilter extends Algorithm {
     public void startTimeTest() {
         prepareTestData();
         PrintWriter pw = this.prepareFileWriter();
-        long timeDiff;
         BloomFilter<String> bf = new BloomFilter(000.1, urls.size());
         System.out.println(urls.size());
         for (int i = 0; i < urls.size(); i++) {

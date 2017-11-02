@@ -12,7 +12,8 @@ public class MatrixMultiplication extends Algorithm {
 
     ArrayList<SimpleMatrix> A;
     ArrayList<SimpleMatrix> B;
-    String path ="C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATRIX\\";
+//    String path ="C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATRIX\\";
+    String path ="/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/MATRIX/";
 
     public MatrixMultiplication(String fileName, int iterations) {
         super(fileName, iterations);
@@ -92,7 +93,6 @@ public class MatrixMultiplication extends Algorithm {
     public void startTimeTest() {
         prepareTestData();
         PrintWriter pw = this.prepareFileWriter();
-        long timeDiff;
         for (int i = 0; i < this.getIterations(); i++) {
 
             long xd = System.currentTimeMillis();

@@ -10,7 +10,8 @@ import java.io.PrintWriter;
 
 public class PatternMatchingRabinKarp extends Algorithm {
 
-    String filePath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\potop.txt";
+//    String filePath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\potop.txt";
+    String filePath = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/potop.txt";
     String text;
 
     public PatternMatchingRabinKarp(String fileName, int iterations) {
