@@ -31,18 +31,27 @@
 
         <!-- 2. shortest path in graph -->
         <!-- https://mvnrepository.com/artifact/org.neo4j/neo4j-graph-algo -->
-        <dependency>
-            <groupId>org.neo4j</groupId>
-            <artifactId>neo4j-graph-algo</artifactId>
-            <version>3.2.3</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.neo4j</groupId>-->
+            <!--<artifactId>neo4j-graph-algo</artifactId>-->
+            <!--<version>3.2.6</version>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/es.usc.citius.hipster/hipster-pom -->
+        <!--<dependency>-->
+            <!--<groupId>es.usc.citius.hipster</groupId>-->
+            <!--<artifactId>hipster-pom</artifactId>-->
+            <!--<version>1.0.1</version>-->
+            <!--<type>pom</type>-->
+        <!--</dependency>-->
+
 
         <!-- 3. Levenstein distance -->
         <!-- https://mvnrepository.com/artifact/info.debatty/java-string-similarity -->
         <dependency>
             <groupId>info.debatty</groupId>
             <artifactId>java-string-similarity</artifactId>
-            <version>0.24</version>
+            <version>1.0.0</version>
         </dependency>
 
         <!-- 4. matrix multiplication -->
@@ -70,6 +79,24 @@
         </dependency>
 
         <!-- 9.FFT -->
+
+        <!-- https://mvnrepository.com/artifact/org.boofcv/boofcv -->
+        <!-- https://mvnrepository.com/artifact/org.boofcv/boofcv -->
+        <dependency>
+            <groupId>org.boofcv</groupId>
+            <artifactId>core</artifactId>
+            <version>0.25</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
+
+
         <!-- https://mvnrepository.com/artifact/com.github.rwl/jtransforms -->
         <dependency>
             <groupId>com.github.rwl</groupId>
@@ -84,6 +111,9 @@
             <artifactId>spring-security-rsa</artifactId>
             <version>1.0.5.RELEASE</version>
         </dependency>
+
+
+
 
     </dependencies>
 
