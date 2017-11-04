@@ -297,7 +297,7 @@ public class ShortestPathDijkstra extends Algorithm {
     }
 
     public static void main(String[] args) {
-        ShortestPathDijkstra spd = new ShortestPathDijkstra("dijkstra_test",1);
+        ShortestPathDijkstra spd = new ShortestPathDijkstra("dijkstra_test",100);
         spd.startTimeTest();
     }
 

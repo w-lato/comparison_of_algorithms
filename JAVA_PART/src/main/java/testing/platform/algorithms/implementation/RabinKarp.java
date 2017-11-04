@@ -7,6 +7,7 @@ import org.apache.commons.io.IOUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.ArrayList;
 
 public class RabinKarp
 {
@@ -18,8 +19,9 @@ public class RabinKarp
         txt -> text
         q -> A prime number
     */
-    public static void search(String pat, String txt, int q)
+    public static ArrayList<Integer> search(String pat, String txt, int q)
     {
+        ArrayList<Integer> indexes = new ArrayList<>();
         int M = pat.length();
         int N = txt.length();
         int i, j;
@@ -57,7 +59,8 @@ public class RabinKarp
 
                 // if p == t and pat[0...M-1] = txt[i, i+1, ...i+M-1]
                 if (j == M)
-                    System.out.println("Pattern found at index " + i);
+                    indexes.add(i);
+                    //System.out.println("Pattern found at index " + i);
             }
 
             // Calculate hash value for next window of text: Remove
@@ -72,6 +75,8 @@ public class RabinKarp
                     t = (t + q);
             }
         }
+
+        return indexes;
     }
 
     /* Driver program to test above function */

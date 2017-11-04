@@ -41,7 +41,7 @@ public class PatternMatchingRabinKarp extends Algorithm {
             RabinKarp.search("Radziwiłł", text,113);
             RabinKarp.search( "Czarniecki", text,117);
             RabinKarp.search( "Kowalski", text, 119);
-            RabinKarp.search( "Bóg", text, 123);
+            RabinKarp.search( "Wrzeszczowicz", text, 123);
             RabinKarp.search( "Kazimierz", text, 127);
             RabinKarp.search( "Lubomirski" , text, 131);
             RabinKarp.search( "Kordecki" , text, 137);
@@ -52,11 +52,12 @@ public class PatternMatchingRabinKarp extends Algorithm {
             RabinKarp.search("Oleńka", text,213);
             RabinKarp.search( "Babinicz", text,217);
             RabinKarp.search( "Kordecki", text, 219);
-            RabinKarp.search( "Zamojski", text, 223);
+            RabinKarp.search( "Zamoyski", text, 223);
             RabinKarp.search( "Sakowicz", text, 227);
             RabinKarp.search( "Gustaw" , text, 231);
             RabinKarp.search( "Radziejowski" , text, 237);
-            RabinKarp.search( "Zamoyski" , text, 239);
+            RabinKarp.search( "Miller" , text, 247);
+
 
             pw.println( System.nanoTime() - timeDiff );
         }

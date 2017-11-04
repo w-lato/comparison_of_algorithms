@@ -1,6 +1,7 @@
 package testing.platform.data.source.preparation;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.util.Random;
 
@@ -91,6 +92,39 @@ public class PrepareMatrixes {
 
     }
 
+    public static void prepareNamed(String path, String name,int size) {
+        try {
+//            File file = new File(path + name);
+//            file.createNewFile();
+            BufferedWriter writer = new BufferedWriter(new FileWriter(path + name));
+            Random r = new Random();
+            double[][] x = new double[size][size];
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
+                    x[i][j] = r.nextGaussian();
+                }
+            }
+
+            for (int i = 0; i < size; i++) {
+                String line = "";
+                for (int j = 0; j < size; j++) {
+                    if( j == size - 1) {
+                        line += x[i][j];
+                    } else {
+                        line += x[i][j] + ", ";
+                    }
+                }
+                writer.write(line+ "\r\n");
+            }
+            writer.close();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -100,10 +134,15 @@ public class PrepareMatrixes {
 //        PrepareMatrixes.preparePlain(40);
 //        PrepareMatrixes.preparePlain(50);
 
-        String aPath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATRIX\\set_A.txt";
-        String bPath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATRIX\\set_B.txt";
-        PrepareMatrixes.preparePlain(new int[] {500,600,700,800,900,1000}, aPath);
-        PrepareMatrixes.preparePlain(new int[] {500,600,700,800,900,1000}, aPath);
-//        PrepareMatrixes.preparePlain(new int[] {100,200,300,400,500,600}, bPath);
+        String  path = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/MATRIX/";
+        for (int i = 1; i < 11; i++) {
+            PrepareMatrixes.prepareNamed(path,"A"+i, 400);
+            PrepareMatrixes.prepareNamed(path,"B"+i, 400);
+        }
+//        String aPath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATRIX\\set_A.txt";
+//        String bPath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MATRIX\\set_B.txt";
+//        PrepareMatrixes.preparePlain(new int[] {500,600,700,800,900,1000}, aPath);
+//        PrepareMatrixes.preparePlain(new int[] {500,600,700,800,900,1000}, aPath);
+////        PrepareMatrixes.preparePlain(new int[] {100,200,300,400,500,600}, bPath);
     }
 }
