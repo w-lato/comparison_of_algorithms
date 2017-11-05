@@ -23,11 +23,11 @@
     <dependencies>
         <!-- 1. quicksort -->
         <!-- https://mvnrepository.com/artifact/org.codehaus.jedi/quicksort-example -->
-        <dependency>
-            <groupId>org.codehaus.jedi</groupId>
-            <artifactId>quicksort-example</artifactId>
-            <version>3.0.5</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.jedi</groupId>-->
+            <!--<artifactId>quicksort-example</artifactId>-->
+            <!--<version>3.0.5</version>-->
+        <!--</dependency>-->
 
         <!-- 2. shortest path in graph -->
         <!-- https://mvnrepository.com/artifact/org.neo4j/neo4j-graph-algo -->

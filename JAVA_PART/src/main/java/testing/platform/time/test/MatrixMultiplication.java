@@ -123,20 +123,33 @@ public class MatrixMultiplication extends Algorithm {
         }
     }
 
+    // -XX:+PrintCompilation
+    // -XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation
     @Override
     public void startTimeTest() {
         prepareTestData();
         SimpleMatrix C;
+
+
+        // WARMUP
+        System.out.println("WARMUP");
+        for (int i = 0; i < 10000; i++) {
+            for (int j = 0; j < A.size(); j++) {
+                C = A.get(j).mult(B.get(j));
+            }
+            if(i % 100 == 0)
+                System.out.println(i/100 + "%");
+        }
+
         PrintWriter pw = this.prepareFileWriter();
         for (int i = 0; i < this.getIterations(); i++) {
-
             long xd = System.currentTimeMillis();
             timeDiff = System.nanoTime();
-//            for (int j = 0; j < A.size(); j++) {
-//                C = A.get(j).mult(B.get(j));
-//            }
-            C = A.get(9).mult(B.get(9));
-            C.print();
+            for (int j = 0; j < A.size(); j++) {
+                C = A.get(j).mult(B.get(j));
+            }
+//            C = A.get(9).mult(B.get(9));
+//            C.print();
 //            A.get(0).mult(B.get(0)); // 10
 //            A.get(1).mult(B.get(1)); // 30
 //            A.get(2).mult(B.get(2)); // 50
@@ -151,7 +164,7 @@ public class MatrixMultiplication extends Algorithm {
     }
 
     public static void main(String[] args) {
-        MatrixMultiplication test = new MatrixMultiplication("MatrixMul",100);
+        MatrixMultiplication test = new MatrixMultiplication("MatrixMul",1000);
         test.startTimeTest();
         //  test.startTimeTest();
 

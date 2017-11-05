@@ -26,7 +26,7 @@ public class FastFourierTransform1D extends Algorithm {
 
     public void readDoublesFromFile() {
         BufferedReader br;
-        int size = (int)(Math.pow(2,23));
+        int size = (int)(Math.pow(2,22));
         complexVals = new double[size * 2];
 
         try {
@@ -85,19 +85,21 @@ public class FastFourierTransform1D extends Algorithm {
             timeDiff = System.nanoTime();
             // second param: 2 * nn = arr.length
             NumericFFT.four1(testComplexArr, (int)testComplexArr.length / 2);
-            pw.println( System.nanoTime() - timeDiff );
+            long diff = System.nanoTime() - timeDiff;
+            pw.println( diff );
 
 //            System.out.println("\r\n\r\n\r\n");
 //            for (int j = 0; j < testComplexArr.length; j++) {
 //                System.out.print(testComplexArr[j] + " ");
 //                if(j % 50 == 0)System.out.println("");
 //            }
+            System.out.println(i);
         }
         pw.close();
     }
 
     public static void main(String[] args) {
-        FastFourierTransform1D fft1 = new FastFourierTransform1D("FFT_WINTER", 1);
+        FastFourierTransform1D fft1 = new FastFourierTransform1D("FFT_WINTER", 20000);
         fft1.startTimeTest();
     }
 }
