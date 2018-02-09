@@ -112,13 +112,13 @@ public class cyk {
             }
         }
 
-        System.out.println ("###Parse Tree###");
-        for (int i = 0; i < S.length (); i++) {
-            System.out.print (S.charAt (i) + " ");
-        }
+//        System.out.println ("###Parse Tree###");
+//        for (int i = 0; i < S.length (); i++) {
+//            System.out.print (S.charAt (i) + " ");
+//        }
 
-        System.out.println ();
-        printP (P, n, r, Grammar);
+        //System.out.println ();
+        //printP (P, n, r, Grammar);
         // if any of P[1,n,x] is true (x is iterated over the set s, where s are
         // all the indices for Rs) then
         for (int i = 0; i < startSymbols.length; i++) {

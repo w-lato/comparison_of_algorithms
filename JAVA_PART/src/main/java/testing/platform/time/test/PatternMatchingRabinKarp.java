@@ -11,7 +11,8 @@ import java.io.PrintWriter;
 public class PatternMatchingRabinKarp extends Algorithm {
 
 //    String filePath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\potop.txt";
-    String filePath = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/potop.txt";
+//    String filePath = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/potop.txt";
+    String filePath = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/henryk_sienkiewicz_trylogia.txt";
     String text;
 
     public PatternMatchingRabinKarp(String fileName, int iterations) {
@@ -60,12 +61,14 @@ public class PatternMatchingRabinKarp extends Algorithm {
 
 
             pw.println( System.nanoTime() - timeDiff );
+            pw.flush();
+            System.out.println(i);
         }
         pw.close();
     }
 
     public static void main(String[] args) {
-        PatternMatchingRabinKarp pmr = new PatternMatchingRabinKarp("RabinKarp", 100);
+        PatternMatchingRabinKarp pmr = new PatternMatchingRabinKarp("RabinKarp", 10000);
         pmr.startTimeTest();
     }
 }

@@ -89,13 +89,14 @@ public class HashBloomFilter extends Algorithm {
                 //System.out.println( );
             }
             pw.println( System.nanoTime() - timeDiff );
-            System.out.println( System.currentTimeMillis() - l );
+            pw.flush();
+            System.out.println(i + " " + (System.currentTimeMillis() - l) );
         }
         pw.close();
     }
 
     public static void main(String[] args) {
-        HashBloomFilter hsb = new HashBloomFilter("BLOOM",1000000);
+        HashBloomFilter hsb = new HashBloomFilter("BLOOM",10000);
         hsb.startTimeTest();
     }
 }

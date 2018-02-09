@@ -44,19 +44,21 @@ public class GrammarCYK extends Algorithm {
 //        }
 
 
-            for (int i = 0; i < this.getIterations(); i++) {
+        for (int i = 0; i < this.getIterations(); i++) {
 
             long l = System.currentTimeMillis();
             timeDiff = System.nanoTime();
-            cyk.cyk(input, Grammar);
+            boolean x = cyk.cyk(input, Grammar);
             pw.println( System.nanoTime() - timeDiff );
-            System.out.println( System.currentTimeMillis() - l );
+            pw.flush();
+
+            System.out.println(i + " " + (System.currentTimeMillis() - l)  + " " + x);
         }
         pw.close();
     }
 
     public static void main(String[] args) {
-        GrammarCYK test = new GrammarCYK("CYK_",100);
+        GrammarCYK test = new GrammarCYK("CYK_",10000);
         test.startTimeTest();
     }
 }

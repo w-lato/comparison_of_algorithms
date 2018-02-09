@@ -1,5 +1,6 @@
 package testing.platform.time.test;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import testing.platform.algorithms.implementation.dijkstra.Dijkstra;
 import testing.platform.algorithms.implementation.dijkstra.Graph;
 import testing.platform.algorithms.implementation.dijkstra.Node;
@@ -216,13 +217,29 @@ public class ShortestPathDijkstra extends Algorithm {
     }
 
     private void clearGraph() {
+
         for (Node it : graph.getNodes()
                 ) {
-            System.out.println(it.getName() + " : " + it.getDistance());
+            //System.out.println(it.getName() + " : " + it.getDistance());
             it.setDistance(2147483647);
+            it.getShortestPath().clear();
+
         }
     }
 
+    private void printGraph() {
+        System.out.println();
+        for (Node it : graph.getNodes()
+                ) {
+            System.out.println(it.getName() + " : " + it.getDistance());
+           // System.out.println(it.getShortestPath().size());
+
+        }
+    }
+    // czyszczenie list
+
+    // alkowaac listy i czyszczeni list
+    // 100kb
 //    private void clearGraph(Graph g) {
 //        for (Node it : g.getNodes()
 //                ) {
@@ -250,54 +267,77 @@ public class ShortestPathDijkstra extends Algorithm {
             timeDiff = System.nanoTime();
 
             Dijkstra.calculateShortestPathFromSource(graph, Krakow);
+           // printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Rzeszów);
+          //  printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Katowice);
+         //   printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Wroclaw);
+          //  printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Czestochowa);
+         //   printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Kielce);
+         //   printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Lublin);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, ZielonaGora);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Poznan);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Lodz);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Warszawa);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Bialystok);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Torun);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, GorzowWlkp);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Pila);
+        //    printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Olsztyn);
+         //   printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Suwalki);
+       //     printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Szczecin);
+       //     printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Koszalin);
+       //     printGraph();
             clearGraph();
             Dijkstra.calculateShortestPathFromSource(graph, Gdansk);
+
+        //    printGraph();
             clearGraph();
 
             pw.println( System.nanoTime() - timeDiff );
+            pw.flush();
+            System.out.println(i);
         }
 
         pw.close();
     }
 
     public static void main(String[] args) {
-        ShortestPathDijkstra spd = new ShortestPathDijkstra("dijkstra_test",100);
+        ShortestPathDijkstra spd = new ShortestPathDijkstra("dijkstra_test",10000);
         spd.startTimeTest();
     }
 

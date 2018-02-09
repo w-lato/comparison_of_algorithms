@@ -24,15 +24,17 @@ public class CormenQuickSort extends SortingAlgorithm {
             if(type == SortDataType.SAME)
                 for (int j = 0; j < aux.length; j++) aux[j] = same[j];
 
-            System.out.println(type);
-            for (int j = 0; j < aux.length; j++) {
-                System.out.print(aux[j] + " ");
-                if(j % 50 == 0) System.out.println("");
-            }
+//            System.out.println(type);
+//            for (int j = 0; j < aux.length; j++) {
+//                System.out.print(aux[j] + " ");
+//                if(j % 50 == 0) System.out.println("");
+//            }
 
             timeDiff = System.nanoTime();
             qs.sort(aux, 0, aux.length - 1);
             pw.println( System.nanoTime() - timeDiff );
+            pw.flush();
+            System.out.println(i);
         }
         pw.close();
     }
@@ -52,16 +54,16 @@ public class CormenQuickSort extends SortingAlgorithm {
         int[] aux = new int[same.length];
         testing.platform.algorithms.implementation.CormenQuickSort qs = new testing.platform.algorithms.implementation.CormenQuickSort();
 
-        testAndWriteTofile(aux,SortDataType.RANDOM,qs);
-        testAndWriteTofile(aux,SortDataType.SORTED_ASC,qs);
-        testAndWriteTofile(aux,SortDataType.SORTED_DESC,qs);
+        //testAndWriteTofile(aux,SortDataType.RANDOM,qs);
+        //testAndWriteTofile(aux,SortDataType.SORTED_ASC,qs);
+//        testAndWriteTofile(aux,SortDataType.SORTED_DESC,qs);
         testAndWriteTofile(aux,SortDataType.SAME,qs);
     }
 
     public static void main(String[] args) {
         //String path = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\SORT_DATA\\";
         String path = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/QUICK_SORT/";
-        CormenQuickSort cqs = new CormenQuickSort("QuickSort",1, path);
+        CormenQuickSort cqs = new CormenQuickSort("QuickSort",10000, path);
         cqs.startTimeTest();
     }
 }

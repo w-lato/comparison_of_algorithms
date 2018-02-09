@@ -34,6 +34,8 @@ public class RegularMergeSort extends SortingAlgorithm {
             timeDiff = System.nanoTime();
             gms.sort(aux, 0, aux.length - 1);
             pw.println( System.nanoTime() - timeDiff );
+            pw.flush();
+            System.out.println(i);
         }
         pw.close();
     }
@@ -61,7 +63,7 @@ public class RegularMergeSort extends SortingAlgorithm {
     public static void main(String[] args) {
         //String sortDataPath = "C:\\Users\\wlato\\Desktop\\praca_inzynierska\\MERGE_SORT_DATA\\";
         String sortDataPath = "/home/vm/Desktop/ENGINEERS_REPO/engineers_thesis/DATA/MERGE_SORT/";
-        RegularMergeSort ms = new RegularMergeSort("MergeSort_",1, sortDataPath);
+        RegularMergeSort ms = new RegularMergeSort("MergeSort_",10000, sortDataPath);
         ms.startTimeTest();
     }
 

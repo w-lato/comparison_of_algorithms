@@ -85,8 +85,8 @@ public class FastFourierTransform1D extends Algorithm {
             timeDiff = System.nanoTime();
             // second param: 2 * nn = arr.length
             NumericFFT.four1(testComplexArr, (int)testComplexArr.length / 2);
-            long diff = System.nanoTime() - timeDiff;
-            pw.println( diff );
+            //long diff = System.nanoTime() - timeDiff;
+            pw.println(System.nanoTime() - timeDiff);
 
 //            System.out.println("\r\n\r\n\r\n");
 //            for (int j = 0; j < testComplexArr.length; j++) {
@@ -94,12 +94,13 @@ public class FastFourierTransform1D extends Algorithm {
 //                if(j % 50 == 0)System.out.println("");
 //            }
             System.out.println(i);
+            pw.flush();
         }
         pw.close();
     }
 
     public static void main(String[] args) {
-        FastFourierTransform1D fft1 = new FastFourierTransform1D("FFT_WINTER", 20000);
+        FastFourierTransform1D fft1 = new FastFourierTransform1D("FFT_WINTER",  20000);
         fft1.startTimeTest();
     }
 }

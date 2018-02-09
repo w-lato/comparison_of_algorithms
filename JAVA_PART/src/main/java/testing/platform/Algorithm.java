@@ -4,6 +4,15 @@ import java.io.PrintWriter;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Bazowa, abstrakcyjna klasa, po ktorej dziedzicza wszystkie algorytmy majace byc poddane testom wydajnosci.
+ *
+ *
+ *
+ *
+ */
+
+
 public abstract class Algorithm {
 
     public long timeDiff;
@@ -41,6 +50,7 @@ public abstract class Algorithm {
         this.fileName = fileName;
         this.iterations = iterations;
     }
+
 
     public String getTimeAndDate() {
         Date now = Calendar.getInstance().getTime();

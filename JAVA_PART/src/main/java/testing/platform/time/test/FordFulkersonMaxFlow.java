@@ -95,12 +95,14 @@ public class FordFulkersonMaxFlow extends Algorithm {
             m.fordFulkerson(sovietRailway,8,34);
             m.fordFulkerson(sovietRailway,9,33);
             pw.println( System.nanoTime() - timeDiff );
+            pw.flush();
+            System.out.println(i);
         }
         pw.close();
     }
 
     public static void main(String[] args) {
-        FordFulkersonMaxFlow ffmf = new FordFulkersonMaxFlow("FF_MAx_FLOW", 10);
+        FordFulkersonMaxFlow ffmf = new FordFulkersonMaxFlow("FF_MAX_FLOW", 10000);
         ffmf.startTimeTest();
     }
 }
