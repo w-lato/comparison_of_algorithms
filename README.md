@@ -1,1 +1,1 @@
-# Porównanie wydajności języków Java oraz C++
+# Comparison of selected algorithms implemented in languages Java and C++”. 
